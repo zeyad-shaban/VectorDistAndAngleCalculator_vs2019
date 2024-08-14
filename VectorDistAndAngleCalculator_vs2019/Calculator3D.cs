@@ -21,6 +21,7 @@ namespace VectorDistAndAngleCalculator_vs2019
         {
             double dist = GetDist2Points(p1, p2);
 
+            // Direction cosines equation
             double alpha = Math.Acos((p2.X - p1.X) / dist) * (180.0 / Math.PI);
             double beta = Math.Acos((p2.Y - p1.Y) / dist) * (180.0 / Math.PI);
             double gamma = Math.Acos((p2.Z - p1.Z) / dist) * (180.0 / Math.PI);
@@ -33,9 +34,9 @@ namespace VectorDistAndAngleCalculator_vs2019
             double dy = p2.Y - p1.Y;
             double dz = p2.Z - p1.Z;
 
+            // Project and get angles
             double alpha = Math.Atan2(dx, dy) * 180 / Math.PI;
             double beta = 90 - alpha;
-
             double gamma = Math.Atan2(dy, dz) * 180 / Math.PI;
 
 
