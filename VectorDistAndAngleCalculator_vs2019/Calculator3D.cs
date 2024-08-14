@@ -27,5 +27,19 @@ namespace VectorDistAndAngleCalculator_vs2019
 
             return (alpha, beta, gamma);
         }
+        public static (double alpha, double beta, double gamma) GetAnglesWithProjection(Point p1, Point p2)
+        {
+            double dx = p2.X - p1.X;
+            double dy = p2.Y - p1.Y;
+            double dz = p2.Z - p1.Z;
+
+            double alpha = Math.Atan2(dx, dy) * 180 / Math.PI;
+            double beta = 90 - alpha;
+
+            double gamma = Math.Atan2(dy, dz) * 180 / Math.PI;
+
+
+            return (alpha, beta, gamma);
+        }
     }
 }

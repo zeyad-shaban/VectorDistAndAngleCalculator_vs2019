@@ -42,6 +42,22 @@ namespace VectorDistAndAngleCalculator_vs2019
             alphaTxt.Text = alpha.ToString();
             betaTxt.Text = beta.ToString();
             gammaTxt.Text = gamma.ToString();
+
+            var (alpha_proj, beta_proj, gamma_proj) = Calculator3D.GetAnglesWithProjection(p1, p2);
+
+            projAlphaTxt.Text = alpha_proj.ToString();
+            projBetaTxt.Text = beta_proj.ToString();
+            projGammaTxt.Text = gamma_proj.ToString();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void alphaTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
