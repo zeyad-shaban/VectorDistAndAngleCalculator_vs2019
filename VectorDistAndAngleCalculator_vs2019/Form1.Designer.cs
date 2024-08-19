@@ -49,6 +49,10 @@ namespace VectorDistAndAngleCalculator_vs2019
             this.projGammaTxt = new System.Windows.Forms.TextBox();
             this.projBetaTxt = new System.Windows.Forms.TextBox();
             this.projAlphaTxt = new System.Windows.Forms.TextBox();
+            this.objGammaTxt = new System.Windows.Forms.TextBox();
+            this.objBetaTxt = new System.Windows.Forms.TextBox();
+            this.objAlphaTxt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // p1Txt
@@ -229,11 +233,49 @@ namespace VectorDistAndAngleCalculator_vs2019
             this.projAlphaTxt.Size = new System.Drawing.Size(122, 26);
             this.projAlphaTxt.TabIndex = 17;
             // 
+            // objGammaTxt
+            // 
+            this.objGammaTxt.Location = new System.Drawing.Point(701, 455);
+            this.objGammaTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.objGammaTxt.Name = "objGammaTxt";
+            this.objGammaTxt.Size = new System.Drawing.Size(152, 26);
+            this.objGammaTxt.TabIndex = 23;
+            // 
+            // objBetaTxt
+            // 
+            this.objBetaTxt.Location = new System.Drawing.Point(508, 455);
+            this.objBetaTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.objBetaTxt.Name = "objBetaTxt";
+            this.objBetaTxt.Size = new System.Drawing.Size(140, 26);
+            this.objBetaTxt.TabIndex = 22;
+            this.objBetaTxt.TextChanged += new System.EventHandler(this.objY_TextChanged);
+            // 
+            // objAlphaTxt
+            // 
+            this.objAlphaTxt.Location = new System.Drawing.Point(349, 455);
+            this.objAlphaTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.objAlphaTxt.Name = "objAlphaTxt";
+            this.objAlphaTxt.Size = new System.Drawing.Size(122, 26);
+            this.objAlphaTxt.TabIndex = 21;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(194, 458);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 20);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Objecting Line";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 548);
+            this.Controls.Add(this.objGammaTxt);
+            this.Controls.Add(this.objBetaTxt);
+            this.Controls.Add(this.objAlphaTxt);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.projGammaTxt);
             this.Controls.Add(this.projBetaTxt);
             this.Controls.Add(this.projAlphaTxt);
@@ -284,6 +326,10 @@ namespace VectorDistAndAngleCalculator_vs2019
         private System.Windows.Forms.TextBox projGammaTxt;
         private System.Windows.Forms.TextBox projBetaTxt;
         private System.Windows.Forms.TextBox projAlphaTxt;
+        private System.Windows.Forms.TextBox objGammaTxt;
+        private System.Windows.Forms.TextBox objBetaTxt;
+        private System.Windows.Forms.TextBox objAlphaTxt;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -42,5 +42,21 @@ namespace VectorDistAndAngleCalculator_vs2019
 
             return (alpha, beta, gamma);
         }
+
+        public static (double alpha, double beta, double gamma) GetAnglesWithObjectingLine(Point p1, Point p2)
+        {
+            double dx = p2.X - p1.X;
+            double dy = p2.Y - p1.Y;
+            double dz = p2.Z - p1.Z;
+
+            double magnitude = Math.Sqrt(dx * dx + dy * dy + dz * dz);
+
+            double alpha = Math.Acos(dx / magnitude) * (180.0 / Math.PI);
+            double beta = Math.Acos(dy / magnitude) * (180.0 / Math.PI); 
+            double gamma = Math.Acos(dz / magnitude) * (180.0 / Math.PI);
+
+            return (alpha, beta, gamma);
+        }
+
     }
 }

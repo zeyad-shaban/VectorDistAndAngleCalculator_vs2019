@@ -48,10 +48,16 @@ namespace VectorDistAndAngleCalculator_vs2019
 
             // Get and display direction cosines
             var (alpha_proj, beta_proj, gamma_proj) = Calculator3D.GetAnglesWithProjection(p1, p2);
-
             projAlphaTxt.Text = alpha_proj.ToString();
             projBetaTxt.Text = beta_proj.ToString();
             projGammaTxt.Text = gamma_proj.ToString();
+
+            // Get and dispaly with objecting line
+            var (alpha_obj, beta_obj, gamma_obj) = Calculator3D.GetAnglesWithObjectingLine(p1, p2);
+
+            objAlphaTxt.Text = alpha_obj.ToString();
+            objBetaTxt.Text = beta_obj.ToString();
+            objGammaTxt.Text = gamma_obj.ToString();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -60,6 +66,11 @@ namespace VectorDistAndAngleCalculator_vs2019
         }
 
         private void alphaTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void objY_TextChanged(object sender, EventArgs e)
         {
 
         }
